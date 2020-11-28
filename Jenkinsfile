@@ -35,7 +35,7 @@ pipeline {
             steps {
                  dir("/Users/claudiomontoya/Documents/DiplomadoDevops/Maven/ejemplo-maven"){
                     sh 'sleep 10'
-                    sh 'curl -X GET "http://localhost:8082/rest/mscovid/test?msg=testing"'
+                    sh 'curl -X GET "http://localhost:8081/rest/mscovid/test?msg=testing"'
                  }
             }
         }
