@@ -27,9 +27,18 @@ pipeline {
         stage('run'){
             steps {
                  dir("/Users/claudiomontoya/Documents/DiplomadoDevops/Maven/ejemplo-maven"){
-                    sh './mvnw spring-boot:run'
+                   sh 'nohup bash ./mvnw spring-boot:run &'
                  }
             }
         }
+        stage('Curl') {
+			steps {
+				dir('/Users/selyt2020/Documents/GitHub/ejemplo-maven'){
+				    sh 'sleep 20'
+					sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing &'
+				}
+			}
+
+		}
     }
 }
