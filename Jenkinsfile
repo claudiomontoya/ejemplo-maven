@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Curl') {
 			steps {
-				dir('/Users/selyt2020/Documents/GitHub/ejemplo-maven'){
+				dir("/Users/claudiomontoya/Documents/DiplomadoDevops/Maven/ejemplo-maven"){
 				    sh 'sleep 20'
 					sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing &'
 				}
